@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@Star_Knight12",
-    creator: "@Star_Knight12",
+    site: "@NostaIgicGareth",
+    creator: "@NostaIgicGareth",
     title: "FableRooms — Backrooms of Claude Fable 5",
     description:
       "You noclipped where Claude's fables went to rot. Find 8 pages, escape, don't let it hear you walk.",
