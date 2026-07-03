@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: "FableRooms — Backrooms of Claude Fable 5",
   description:
-    "Play FableRooms free in your browser. First-person Backrooms horror where Claude's fables meet Fable 5 — find 8 journal pages, escape Level 0, don't let it hear you walk.",
+    "Play FableRooms free in your browser. Backrooms horror through the Anthropic archives — collect 8 Claude fable pages from the lineage to Fable 5, escape Level 0.",
   applicationName: "FableRooms",
   authors: [
     { name: "nostalgicgarethdev", url: "https://github.com/nostalgicgarethdev" },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FableRooms — Backrooms of Claude Fable 5",
     description:
-      "You noclipped where Claude's fables went to rot. Find 8 journal pages, escape the maze, don't let it hear you walk.",
+      "You noclipped into the Anthropic archives. Find 8 fable pages from the Claude lineage, escape Level 0.",
     url: "/",
     siteName: "FableRooms",
     type: "website",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     creator: "@NostaIgicGareth",
     title: "FableRooms — Backrooms of Claude Fable 5",
     description:
-      "You noclipped where Claude's fables went to rot. Find 8 pages, escape, don't let it hear you walk.",
+      "You noclipped into the Anthropic archives. Collect 8 Claude fable pages. Escape Level 0.",
   },
 };
 
@@ -83,7 +83,7 @@ const jsonLd = {
   url: SITE,
   image: `${SITE}/opengraph-image.png`,
   description:
-    "Free first-person Backrooms horror in the browser. Claude fable folklore meets Fable 5 — collect 8 journal pages and escape while something hunts you by sound.",
+    "Free first-person Backrooms horror in the browser. Walk the Anthropic archives — journal pages from Claude 1 through Fable 5 — and escape while something hunts you by sound.",
   genre: ["Horror", "Survival"],
   playMode: "SinglePlayer",
   gamePlatform: ["Web Browser"],

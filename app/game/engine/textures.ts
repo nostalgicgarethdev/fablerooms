@@ -396,7 +396,7 @@ export function makeLightPanelTexture(): THREE.CanvasTexture {
 /*  JOURNAL PAGES — handwritten scraps   */
 /* ------------------------------------ */
 
-/** Journal pages — FableRooms lore (Claude fables × Fable 5 backrooms). */
+/** Journal pages — Anthropic / Claude lineage lore (Book of Claude Fables → Fable 5). */
 export const PAGE_TEXTS: string[][] = FABLE_PAGE_TEXTS;
 
 export function makePageTexture(seed: number, index: number): THREE.CanvasTexture {

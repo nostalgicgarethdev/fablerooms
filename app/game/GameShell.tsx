@@ -11,6 +11,7 @@ import {
 } from "react";
 import type { Engine, EngineCallbacks, GameState, HudState } from "./engine/Engine";
 import {
+  FABLE_LEVEL_SUBTITLE,
   FABLE_LOCATIONS,
   FABLE_MENU_TAGLINE,
   FABLE_WIN_TEASE,
@@ -262,8 +263,8 @@ export default function GameShell() {
       {/* --------------------------- START MENU --------------------------- */}
       {state === "idle" && (
         <Overlay vhs>
-              <div className="flicker-slow font-elite text-[11px] tracking-[0.6em] text-fable-green/70">
-                LEVEL 0 · THE WHISPERING ATRIUM
+              <div className="flicker-slow font-elite text-[11px] tracking-[0.5em] text-fable-green/70">
+                {FABLE_LEVEL_SUBTITLE}
               </div>
               <h1 className="vhs-title font-elite mt-3 text-5xl tracking-[0.14em] text-amber-50/95 sm:text-6xl">
                 FABLEROOMS

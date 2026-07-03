@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "FableRooms — Backrooms of Claude Fable 5",
     short_name: "FableRooms",
     description:
-      "Claude fable folklore meets Fable 5 backrooms. Find the pages. Find the door. Don't let it find you.",
+      "Anthropic archives backrooms — Claude fables from the lineage to Fable 5. Find the pages. Find the door.",
     start_url: "/",
     // Installed-to-home-screen runs with zero browser chrome — the only
     // route to true fullscreen on iPhones, where the Fullscreen API is N/A.
