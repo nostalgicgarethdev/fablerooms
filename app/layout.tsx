@@ -18,7 +18,7 @@ const specialElite = localFont({
   fallback: ["Courier New", "monospace"],
 });
 
-const SITE = "https://fablerooms.vercel.app";
+const SITE = "https://fablerooms.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
