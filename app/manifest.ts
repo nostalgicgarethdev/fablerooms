@@ -5,10 +5,10 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "BACKROOMS — LEVEL 0",
-    short_name: "BACKROOMS",
+    name: "FableRooms — Backrooms of Claude Fable 5",
+    short_name: "FableRooms",
     description:
-      "A procedural first-person horror experience. Find the pages. Find the door. Don't let it find you.",
+      "Claude fable folklore meets Fable 5 backrooms. Find the pages. Find the door. Don't let it find you.",
     start_url: "/",
     // Installed-to-home-screen runs with zero browser chrome — the only
     // route to true fullscreen on iPhones, where the Fullscreen API is N/A.

@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { FABLE_PAGE_TEXTS } from "./fableLore";
 import { mulberry32, randRange, ValueNoise } from "./rng";
 
 /**
@@ -395,16 +396,8 @@ export function makeLightPanelTexture(): THREE.CanvasTexture {
 /*  JOURNAL PAGES — handwritten scraps   */
 /* ------------------------------------ */
 
-export const PAGE_TEXTS: string[][] = [
-  ["DAY 1?", "noclipped through the", "office floor. carpet is", "damp. the hum never", "stops. never."],
-  ["the lights go out", "when IT walks.", "count the seconds.", "it counts too."],
-  ["DON'T RUN.", "running makes noise.", "noise makes it", "curious."],
-  ["i saw it standing in", "the dark today.", "it didn't move.", "it was watching me", "blink."],
-  ["the walls taste like", "old paper. i licked", "them. i'm sorry.", "i was so hungry."],
-  ["if you look at it,", "it stops. it waits.", "your eyes get dry.", "you WILL blink."],
-  ["found a door once.", "green light above it.", "it was humming a", "different song."],
-  ["8 pages. that's all", "i had left. if you", "found them all —", "the exit knows you.", "RUN FOR IT."],
-];
+/** Journal pages — FableRooms lore (Claude fables × Fable 5 backrooms). */
+export const PAGE_TEXTS: string[][] = FABLE_PAGE_TEXTS;
 
 export function makePageTexture(seed: number, index: number): THREE.CanvasTexture {
   const W = 256, H = 330;

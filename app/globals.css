@@ -2,6 +2,7 @@
 
 @theme inline {
   --font-elite: var(--font-elite), "Courier New", monospace;
+  --color-fable-green: #33ff66;
 }
 
 html,
@@ -12,6 +13,10 @@ body {
 
 .font-elite {
   font-family: var(--font-elite), "Courier New", monospace;
+}
+
+.text-fable-green {
+  color: var(--color-fable-green);
 }
 
 /* ------------------------------------------------------------------ */

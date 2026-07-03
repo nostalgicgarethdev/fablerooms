@@ -4,6 +4,7 @@ import { Player } from "./player";
 import { Entity } from "./entity";
 import { GameAudio } from "./audio";
 import { GameFX } from "./fx";
+import { FABLE_PAGE_WHISPERS } from "./fableLore";
 import { Items, TOTAL_PAGES } from "./items";
 import { randRange } from "./rng";
 
@@ -466,6 +467,8 @@ export class Engine {
       const lines = this.items.collectPage(hit.index);
       this.audio.pageStinger();
       this.callbacks.onPageText(lines);
+      const whisper = FABLE_PAGE_WHISPERS[hit.index % FABLE_PAGE_WHISPERS.length];
+      if (whisper) this.toast(whisper);
       this.fearSpike = Math.min(1, this.fearSpike + 0.22);
       if (this.items.collected === 1) this.entity.activate();
       this.pushHud(true);

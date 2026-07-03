@@ -18,39 +18,38 @@ const specialElite = localFont({
   fallback: ["Courier New", "monospace"],
 });
 
-const SITE = "https://backroom-escape.vercel.app";
+const SITE = "https://fablerooms.vercel.app";
 
 export const metadata: Metadata = {
-  // Absolute base so og:image/twitter:image resolve for social scrapers.
   metadataBase: new URL(SITE),
-  // Search-facing title (what people actually type: "backrooms game",
-  // "browser horror game"). In-game branding stays BACKROOMS — LEVEL 0.
-  title: "Backrooms: Level 0 — Free Browser Horror Game",
+  title: "FableRooms — Backrooms of Claude Fable 5",
   description:
-    "Play the Backrooms free in your browser. First-person horror in a procedurally generated maze — find the 8 pages, escape Level 0, don't let it hear you walk. No download.",
-  applicationName: "Backrooms: Level 0",
-  authors: [{ name: "StarKnightt", url: "https://github.com/StarKnightt" }],
-  creator: "StarKnightt",
+    "Play FableRooms free in your browser. First-person Backrooms horror where Claude's fables meet Fable 5 — find 8 journal pages, escape Level 0, don't let it hear you walk.",
+  applicationName: "FableRooms",
+  authors: [
+    { name: "nostalgicgarethdev", url: "https://github.com/nostalgicgarethdev" },
+    { name: "StarKnightt", url: "https://github.com/StarKnightt" },
+  ],
+  creator: "nostalgicgarethdev",
   keywords: [
+    "fablerooms",
     "backrooms game",
-    "backrooms",
-    "play backrooms online",
+    "claude fable",
+    "fable 5 backrooms",
     "browser horror game",
-    "free horror game",
     "level 0",
     "liminal space game",
-    "no download horror game",
     "three.js game",
     "procedural horror",
   ],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Backrooms: Level 0 — Free Browser Horror Game",
+    title: "FableRooms — Backrooms of Claude Fable 5",
     description:
-      "You noclipped out of reality. Find the 8 pages, escape the maze, don't let it hear you walk. Every run is a maze that has never existed before.",
+      "You noclipped where Claude's fables went to rot. Find 8 journal pages, escape the maze, don't let it hear you walk.",
     url: "/",
-    siteName: "Backrooms: Level 0",
+    siteName: "FableRooms",
     type: "website",
     locale: "en_US",
   },
@@ -58,9 +57,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@Star_Knight12",
     creator: "@Star_Knight12",
-    title: "Backrooms: Level 0 — Free Browser Horror Game",
+    title: "FableRooms — Backrooms of Claude Fable 5",
     description:
-      "You noclipped out of reality. Find the 8 pages, escape the maze, don't let it hear you walk.",
+      "You noclipped where Claude's fables went to rot. Find 8 pages, escape, don't let it hear you walk.",
   },
 };
 
@@ -80,11 +79,11 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "VideoGame",
-  name: "Backrooms: Level 0",
+  name: "FableRooms",
   url: SITE,
   image: `${SITE}/opengraph-image.png`,
   description:
-    "Free first-person horror game in the browser. Explore a procedurally generated Backrooms maze, collect the 8 pages and escape — while something hunts you by sound.",
+    "Free first-person Backrooms horror in the browser. Claude fable folklore meets Fable 5 — collect 8 journal pages and escape while something hunts you by sound.",
   genre: ["Horror", "Survival"],
   playMode: "SinglePlayer",
   gamePlatform: ["Web Browser"],
@@ -100,9 +99,9 @@ const jsonLd = {
   },
   author: {
     "@type": "Person",
-    name: "StarKnightt",
-    url: "https://github.com/StarKnightt",
-    sameAs: ["https://x.com/Star_Knight12", "https://github.com/StarKnightt"],
+    name: "nostalgicgarethdev",
+    url: "https://github.com/nostalgicgarethdev",
+    sameAs: ["https://github.com/nostalgicgarethdev"],
   },
 };
 
