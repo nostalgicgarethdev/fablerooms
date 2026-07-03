@@ -18,6 +18,8 @@ import {
 } from "./engine/fableLore";
 
 const REPO_URL = "https://github.com/nostalgicgarethdev/fablerooms";
+const TOKEN_CA = "ZpBXuwpsRR8p4soiULuoXpCNnjQ6A9tAp8YGmASpump";
+const PUMP_URL = `https://pump.fun/coin/${TOKEN_CA}`;
 
 const GameCanvas = dynamic(() => import("./GameCanvas"), { ssr: false });
 
@@ -314,6 +316,8 @@ export default function GameShell() {
               <p className="font-elite mt-6 text-[11px] tracking-[0.3em] text-amber-100/25">
                 HEADPHONES STRONGLY RECOMMENDED
               </p>
+
+              <CaBadge className="mt-5" />
         </Overlay>
       )}
 
@@ -342,9 +346,10 @@ export default function GameShell() {
           <p className="font-elite mt-3 text-[10px] tracking-[0.25em] text-amber-100/20">
             THE RUN IS LOST. THE PAGES STAY.
           </p>
-          <div className="mt-8 flex items-center gap-8">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
             <GitHubBadge />
             <XBadge />
+            <CaBadge />
           </div>
         </Overlay>
       )}
@@ -472,6 +477,59 @@ function XBadge({
       </svg>
       {label}
     </a>
+  );
+}
+
+function CaBadge({ className = "" }: { className?: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(TOKEN_CA);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2200);
+    } catch {
+      /* fallback for older browsers */
+      const ta = document.createElement("textarea");
+      ta.value = TOKEN_CA;
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2200);
+    }
+  };
+
+  return (
+    <div
+      className={`font-elite flex max-w-md flex-col items-center gap-1.5 text-center ${className}`}
+    >
+      <span className="text-[10px] tracking-[0.35em] text-fable-green/50">CA</span>
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        <button
+          type="button"
+          onClick={copy}
+          title="Copy contract address"
+          className="max-w-[min(92vw,28rem)] break-all border border-fable-green/25 bg-black/40 px-3 py-1.5 text-[10px] tracking-[0.08em] text-fable-green/80 transition-all hover:border-fable-green/55 hover:bg-fable-green/5 hover:text-fable-green"
+        >
+          {TOKEN_CA}
+        </button>
+        <a
+          href={PUMP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border border-amber-100/20 px-2.5 py-1.5 text-[10px] tracking-[0.2em] text-amber-100/45 transition-all hover:border-amber-100/50 hover:text-amber-100/75"
+        >
+          PUMP
+        </a>
+      </div>
+      <span className="text-[9px] tracking-[0.25em] text-amber-100/25">
+        {copied ? "COPIED" : "TAP TO COPY"}
+      </span>
+    </div>
   );
 }
 
