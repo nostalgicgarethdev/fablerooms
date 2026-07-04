@@ -18,7 +18,7 @@ import {
 } from "./engine/fableLore";
 
 const REPO_URL = "https://github.com/nostalgicgarethdev/fablerooms";
-const TOKEN_CA = "ZpBXuwpsRR8p4soiULuoXpCNnjQ6A9tAp8YGmASpump";
+const TOKEN_CA = "DxFzQuEKUKcSbeSw6AVjzfpZ6V24KnbLLHCT7B7Spump";
 const PUMP_URL = `https://pump.fun/coin/${TOKEN_CA}`;
 
 const GameCanvas = dynamic(() => import("./GameCanvas"), { ssr: false });
